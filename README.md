@@ -13,4 +13,5 @@ Make a collection of your favourite books.
 - If the user's number equals the programs number, the game is over
 
 Extra 1: When the user guesses correctly, the program tells them how many tries they needed to do so
+
 Extra 2: When the user guesses correctly, they can start a new round
