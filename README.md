@@ -35,24 +35,31 @@ C | O | X |   |
 
 <details>
   <summary>Hint 1</summary>
+  
   Use a single list to represent the game board.
 </details>
 
 <details>
   <summary>Hint 2</summary>
+  
   Use two nested for-loops to render the game board (x- and y-coordinates).
 </details>
 
 <details>
   <summary>Solution</summary>
+  
   The gameboard has a size of 3x3 cells so the size of the list / array is $x * y = 9$.
+  
   `gameboard = ["", "", "", "", "", "", "", "", ""]`
 
-  To represent a game piece, set the appropriate index to "O" or "X".
+  To represent a game piece, set the appropriate index to "O" or "X". The list index of $x$- and $y$-coordinates can be calculated with $y * W + x$ where $W$ is the width of the game board.
+  
   `gameboard[y * 3 + x] = "O"`
+  
   Use a function with the signature `putPiece(type: string, x: int, y: int): boolean` to do this.
 
   Inside this function, check if cell is already occupied or invalid. Return false for errors and show a message to the player.
+  
   ```
   function putPiece(type: string, x: int, y: int): boolean {
     if (x < 0 || x > 2) return false
@@ -74,6 +81,7 @@ C | O | X |   |
   ```
 
   Use a function to check neighbors of a game piece.
+  
   ```
   function checkWin(player: string): boolean { // Takes "O" or "X" and returns true if player has won
     // Check horizontal lines
@@ -95,6 +103,7 @@ C | O | X |   |
 
 <details>
   <summary>Additional ideas</summary>
+  
   - Render the game board with [box-drawing characters](https://www.utf8icons.com/subsets/box-drawing)
   - Make the game board bigger
   - Add more pieces in one line needed to win (e.g. four in a row)
