@@ -46,13 +46,28 @@ C | O | X |   |
 </details>
 
 <details>
+  <summary>Hint 3</summary>
+
+  You can map the index of a list to 2-dimensional coordinates by splitting it into four components:
+
+  - Width ($w$)
+  - Height ($h$)
+  - X-coordinate ($x$)
+  - Y-coordinate ($y$)
+
+  So the calculation of a cell is:
+
+  $f(x,y) = y \times w + x$
+</details>
+
+<details>
   <summary>Solution</summary>
   
-  The gameboard has a size of 3x3 cells so the size of the list / array is $x * y = 9$.
+  The gameboard has a size of 3x3 cells so the size of the list / array is $x \times y = 9$.
   
   `gameboard = ["", "", "", "", "", "", "", "", ""]`
 
-  To represent a game piece, set the appropriate index to "O" or "X". The list index of $x$- and $y$-coordinates can be calculated with $y * W + x$ where $W$ is the width of the game board.
+  To represent a game piece, set the appropriate index to "O" or "X". The list index of $x$- and $y$-coordinates can be calculated with $y \times W + x$ where $W$ is the width of the game board.
   
   `gameboard[y * 3 + x] = "O"`
   
